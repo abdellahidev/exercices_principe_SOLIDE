@@ -1,3 +1,5 @@
+package fr.uvsq.coo.ex3_1;
+
 public class Employe {
 	private final
 	String nom ;

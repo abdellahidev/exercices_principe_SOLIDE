@@ -1,3 +1,5 @@
+package fr.uvsq.coo.ex3_1;
+
 public class Salaire{
 	private double salaireBase;
 	private double salaireAnciennete;
