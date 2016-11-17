@@ -1,15 +1,23 @@
 package fr.uvsq.coo.ex3_2;
 
-public class Employe{
-	private double salaireBase=1500;
+public abstract class Employe extends Travailleur{
 	private double salaireAnciennete=20;
-	private int nbranne;
-
-	public Employe(double salaireBase, double salaireAnciennete, int nbranne){
-		this.salaireBase=salaireBase;
+	private int nbrAnne;
+	public Employe(double salaireAnciennete, int nbrAnne){
 		this.salaireAnciennete=salaireAnciennete;
-		this.nbranne=nbranne;
+		this.nbrAnne=nbrAnne;
 	}
+	public int getNbranne(){return nbrAnne; }
+	public double getSalaireAnciennete(){return salaireAnciennete; }
 
-	public double calculSalaire(){return salaireBase+ (nbranne*salaireAnciennete);}
-}
+	public int getNbrAnne() {
+		return nbrAnne;
+	}
+	public void setNbrAnne(int nbrAnne) {
+		this.nbrAnne = nbrAnne;
+	}
+	public void setSalaireAnciennete(double salaireAnciennete) {
+		this.salaireAnciennete = salaireAnciennete;
+	}
+	public abstract double calculSalaire();
+} 

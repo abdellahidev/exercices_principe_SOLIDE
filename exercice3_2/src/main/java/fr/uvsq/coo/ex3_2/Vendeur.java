@@ -1,15 +1,24 @@
 package fr.uvsq.coo.ex3_2;
 
-public class Vendeur{
-	private double salaireBase=1500;
-	private double salaireCommision=20;
+public class Vendeur extends Employe{
+	private double commision;
 	
 
-	public Vendeur(double salaireBase, double salaireCommision){
-		this.salaireBase=salaireBase;
-		this.salaireCommision=salaireCommision;
+	public Vendeur(double salaireAnciennete,int nbrAnne, double salaireCommision){
+		super(salaireAnciennete,nbrAnne);
+		this.commision=commision;
 		
 	}
 
-	public double calculSalaire(){return salaireBase+ salaireCommision;}
+	public double getCommision() {
+		return commision;
+	}
+
+	public void setCommision(double commision) {
+		this.commision = commision;
+	}
+
+	public double calculSalaire(){
+		return 1500 + getSalaireAnciennete()*getNbranne()+commision;
+		}
 }
